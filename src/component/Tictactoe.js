@@ -1,10 +1,25 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 function Tictactoe() {
+    const [board, setBoard] = useState(Array(9).fill(null));
+    const [isXTurn, setXTurn] = useState(true);
 
-    const renderSquare = () => {
+
+
+
+    const handleClick = (index) => {
+     
+        console.log(index, "clicked");
+        const newBoard = [...board];
+        newBoard[index] = isXTurn ? "X" : "O";
+        setBoard(newBoard);
+        setXTurn(!isXTurn);
+       
+      };
+
+    const renderSquare = (index) => {
         return(
-            <button className='square'>X</button>
+            <button onClick={() => handleClick(index)} className='square'>{board[index]}</button>
         )
     }
   return (
