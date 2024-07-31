@@ -2,6 +2,14 @@ body {
   background-color: #5e5b5b;
 }
 
+.heading{
+    text-align: center;
+}
+
+.msg-container{
+    text-align: center;
+}
+
 .board {
   display: flex;
   flex-direction: column;
