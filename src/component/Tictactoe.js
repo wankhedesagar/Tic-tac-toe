@@ -91,7 +91,7 @@ function Tictactoe() {
     <React.Fragment>
       <h1 className="heading">Tic-Tac-Toe</h1>
       <div className="msg-container"> 
-          <h2 className={`${isDraw ? "draw" : ""} ${statusClass}`} >{status}</h2>       
+          <h2 className={`${isDraw ? "draw" : ""} ${statusClass} ${winner ? 'winner' : ""}`} >{status}</h2>       
       </div>
 
     <div className="board">
