@@ -47,8 +47,14 @@ function Tictactoe() {
       };
 
     const renderSquare = (index) => {
+      const squareStyle = {
+        color: isDraw ? "red" : board[index] === "X" ? "black" : board[index] === "O" ? "white" : "black",
+        backgroundColor: isDraw ? "gray" : board[index] === "X" ? "white" : board[index] === "O" ? "black" : "white"
+      };
+
+
         return(
-            <button onClick={() => handleClick(index)} className='square'>{board[index]}</button>
+            <button onClick={() => handleClick(index)} style={squareStyle} className='square'>{board[index]}</button>
         )
     }
 
