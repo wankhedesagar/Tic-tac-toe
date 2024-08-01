@@ -106,7 +106,9 @@ function Tictactoe() {
   </div>
   <div className="buttons">
     <button className="reset_button" onClick={resetGame}>Reset Game</button>
+    {(winner || isDraw)&&
     <button className="new_game_button" onClick={newGame}>New Game</button>
+  }
   </div>
   </React.Fragment>
   )
