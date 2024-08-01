@@ -4,6 +4,8 @@ function Tictactoe() {
     const [board, setBoard] = useState(Array(9).fill(null));
     const [isXTurn, setXTurn] = useState(true);
     const [winner, setWinner] = useState(null);
+    const [isDraw, setIsDraw] = useState(false);
+
 
 
     const checkWinner = (board) => {
