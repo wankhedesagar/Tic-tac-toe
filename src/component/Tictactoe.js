@@ -54,7 +54,7 @@ function Tictactoe() {
 
 
         return(
-            <button onClick={() => handleClick(index)} style={squareStyle} className='square'>{board[index]}</button>
+            <button disabled={winner || isDraw || board[index] !== null} onClick={() => handleClick(index)} style={squareStyle} className='square'>{board[index]}</button>
         )
     }
 
@@ -69,6 +69,7 @@ function Tictactoe() {
     const newGame = () => {
       setBoard(Array(9).fill(null));
       setXTurn(true);
+      setWinner(null);
       setIsDraw(false)
 
     };

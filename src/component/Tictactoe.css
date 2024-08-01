@@ -2,6 +2,10 @@ body {
   background-color: #5e5b5b;
 }
 
+h1{
+  color: #fff;
+}
+
 .heading {
   text-align: center;
 }
@@ -61,11 +65,11 @@ body {
 }
 
 .draw {
-  color: red;
+  color: red !important;
 }
 
 .winner {
-  color: #00ff00;
+  color: #00ff00 !important;
 }
 
 .status-x {
