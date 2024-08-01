@@ -42,7 +42,7 @@ body {
   padding: 8px;
 }
 
-.reset_button{
+.reset_button {
   background-color: #0000ff;
   border: none;
   outline: none;
@@ -51,7 +51,7 @@ body {
   border-radius: 4px;
 }
 
-.new_game_button{
+.new_game_button {
   background-color: green;
   border: none;
   outline: none;
@@ -64,8 +64,14 @@ body {
   color: red;
 }
 
+.winner {
+  color: #00ff00;
+}
 
-  
-  .winner{
-    color: #00ff00	;
-  }
+.status-x {
+  color: #ff0080	;
+}
+
+.status-o {
+  color: #ffff00	;
+}
