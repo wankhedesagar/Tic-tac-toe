@@ -47,6 +47,17 @@ function Tictactoe() {
         )
     }
 
+    const resetGame = () => {
+      setBoard(Array(9).fill(null));
+      setXTurn(true);
+      setWinner(null);
+    };
+  
+    const newGame = () => {
+      setBoard(Array(9).fill(null));
+      setXTurn(true);
+    };
+
 
 
     
@@ -75,8 +86,8 @@ function Tictactoe() {
     </div>
   </div>
   <div className="buttons">
-    <button className="reset_button">Reset Game</button>
-    <button className="new_game_button">New Game</button>
+    <button className="reset_button" onClick={resetGame}>Reset Game</button>
+    <button className="new_game_button" onClick={newGame}>New Game</button>
   </div>
   </React.Fragment>
   )
