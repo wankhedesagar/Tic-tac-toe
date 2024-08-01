@@ -74,6 +74,10 @@ function Tictactoe() {
       {renderSquare(8)}
     </div>
   </div>
+  <div className="buttons">
+    <button className="reset_button">Reset Game</button>
+    <button className="new_game_button">New Game</button>
+  </div>
   </React.Fragment>
   )
 }
