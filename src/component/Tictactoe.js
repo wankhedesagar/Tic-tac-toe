@@ -41,6 +41,9 @@ function Tictactoe() {
         if (winnerCombination) {
           setWinner(newBoard[winnerCombination[0]]);
         }
+        else if (newBoard.every((square) => square !== null)) {
+          setIsDraw(true);
+        }
       };
 
     const renderSquare = (index) => {
@@ -53,12 +56,26 @@ function Tictactoe() {
       setBoard(Array(9).fill(null));
       setXTurn(true);
       setWinner(null);
+      setIsDraw(false)
+
     };
   
     const newGame = () => {
       setBoard(Array(9).fill(null));
       setXTurn(true);
+      setIsDraw(false)
+
     };
+
+    let status;
+    if (winner) {
+      status = `Congratulations ${winner.toUpperCase()} is the Winner of this Game.`;
+      console.log(`winner of this game ${winner}`);
+    } else if (isDraw) {
+      status = `The game is a draw`;
+    } else {
+      status = "Next player: " + (isXTurn ? "X" : "O");
+    }
 
 
 
@@ -67,7 +84,7 @@ function Tictactoe() {
     <React.Fragment>
       <h1 className="heading">Tic-Tac-Toe</h1>
       <div className="msg-container"> 
-      {winner && `${winner} is winner of this Game.`}
+          <h2 className="msgPrint" >{status}</h2>       
       </div>
 
     <div className="board">
